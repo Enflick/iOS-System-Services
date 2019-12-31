@@ -19,6 +19,8 @@
 // utsname
 #import <sys/utsname.h>
 
+static BOOL sCachedIsProximityEnabled = false;
+
 @implementation SSHardwareInfo
 
 // System Hardware Information
@@ -422,6 +424,10 @@
 
 // Proximity sensor enabled?
 + (BOOL)proximitySensorEnabled {
+    if (![NSThread isMainThread]) {
+        return sCachedIsProximityEnabled;
+    }
+
     // Is the proximity sensor enabled?
     if ([[UIDevice currentDevice] respondsToSelector:@selector(setProximityMonitoringEnabled:)]) {
         // Create a UIDevice variable
@@ -451,9 +457,11 @@
         }
         
         // Return on or off
+        sCachedIsProximityEnabled = ProximitySensor;
         return ProximitySensor;
     } else {
         // Doesn't respond to selector
+        sCachedIsProximityEnabled = false;
         return false;
     }
 }
