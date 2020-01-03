@@ -7,36 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		35BC567A23BF8DD600170F49 /* SystemServices.h in Headers */ = {isa = PBXBuildFile; fileRef = 35BC565A23BF8DD600170F49 /* SystemServices.h */; };
-		35BC567B23BF8DD600170F49 /* SSNetworkInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 35BC565C23BF8DD600170F49 /* SSNetworkInfo.h */; };
+		35BC567A23BF8DD600170F49 /* SystemServices.h in Headers */ = {isa = PBXBuildFile; fileRef = 35BC565A23BF8DD600170F49 /* SystemServices.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		35BC567B23BF8DD600170F49 /* SSNetworkInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 35BC565C23BF8DD600170F49 /* SSNetworkInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35BC567C23BF8DD600170F49 /* SSAccessoryInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BC565D23BF8DD600170F49 /* SSAccessoryInfo.m */; };
-		35BC567D23BF8DD600170F49 /* SSJailbreakCheck.h in Headers */ = {isa = PBXBuildFile; fileRef = 35BC565E23BF8DD600170F49 /* SSJailbreakCheck.h */; };
+		35BC567D23BF8DD600170F49 /* SSJailbreakCheck.h in Headers */ = {isa = PBXBuildFile; fileRef = 35BC565E23BF8DD600170F49 /* SSJailbreakCheck.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35BC567E23BF8DD600170F49 /* SSUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BC565F23BF8DD600170F49 /* SSUUID.m */; };
-		35BC567F23BF8DD600170F49 /* SSAccelerometerInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 35BC566023BF8DD600170F49 /* SSAccelerometerInfo.h */; };
+		35BC567F23BF8DD600170F49 /* SSAccelerometerInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 35BC566023BF8DD600170F49 /* SSAccelerometerInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35BC568023BF8DD600170F49 /* SSLocalizationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BC566123BF8DD600170F49 /* SSLocalizationInfo.m */; };
-		35BC568123BF8DD600170F49 /* SSHardwareInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 35BC566223BF8DD600170F49 /* SSHardwareInfo.h */; };
-		35BC568223BF8DD600170F49 /* route.h in Headers */ = {isa = PBXBuildFile; fileRef = 35BC566323BF8DD600170F49 /* route.h */; };
+		35BC568123BF8DD600170F49 /* SSHardwareInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 35BC566223BF8DD600170F49 /* SSHardwareInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		35BC568223BF8DD600170F49 /* route.h in Headers */ = {isa = PBXBuildFile; fileRef = 35BC566323BF8DD600170F49 /* route.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35BC568323BF8DD600170F49 /* SSBatteryInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BC566423BF8DD600170F49 /* SSBatteryInfo.m */; };
-		35BC568423BF8DD600170F49 /* SSProcessInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 35BC566523BF8DD600170F49 /* SSProcessInfo.h */; };
+		35BC568423BF8DD600170F49 /* SSProcessInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 35BC566523BF8DD600170F49 /* SSProcessInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35BC568523BF8DD600170F49 /* SSDiskInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BC566623BF8DD600170F49 /* SSDiskInfo.m */; };
-		35BC568623BF8DD600170F49 /* SSApplicationInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 35BC566723BF8DD600170F49 /* SSApplicationInfo.h */; };
+		35BC568623BF8DD600170F49 /* SSApplicationInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 35BC566723BF8DD600170F49 /* SSApplicationInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35BC568723BF8DD600170F49 /* SSCarrierInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BC566823BF8DD600170F49 /* SSCarrierInfo.m */; };
-		35BC568823BF8DD600170F49 /* SSProcessorInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 35BC566923BF8DD600170F49 /* SSProcessorInfo.h */; };
-		35BC568923BF8DD600170F49 /* SSMemoryInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 35BC566A23BF8DD600170F49 /* SSMemoryInfo.h */; };
+		35BC568823BF8DD600170F49 /* SSProcessorInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 35BC566923BF8DD600170F49 /* SSProcessorInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		35BC568923BF8DD600170F49 /* SSMemoryInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 35BC566A23BF8DD600170F49 /* SSMemoryInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35BC568A23BF8DD600170F49 /* SSAccelerometerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BC566B23BF8DD600170F49 /* SSAccelerometerInfo.m */; };
 		35BC568B23BF8DD600170F49 /* SSJailbreakCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BC566C23BF8DD600170F49 /* SSJailbreakCheck.m */; };
-		35BC568C23BF8DD600170F49 /* SSUUID.h in Headers */ = {isa = PBXBuildFile; fileRef = 35BC566D23BF8DD600170F49 /* SSUUID.h */; };
-		35BC568D23BF8DD600170F49 /* SSAccessoryInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 35BC566E23BF8DD600170F49 /* SSAccessoryInfo.h */; };
+		35BC568C23BF8DD600170F49 /* SSUUID.h in Headers */ = {isa = PBXBuildFile; fileRef = 35BC566D23BF8DD600170F49 /* SSUUID.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		35BC568D23BF8DD600170F49 /* SSAccessoryInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 35BC566E23BF8DD600170F49 /* SSAccessoryInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35BC568E23BF8DD600170F49 /* SSNetworkInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BC566F23BF8DD600170F49 /* SSNetworkInfo.m */; };
 		35BC568F23BF8DD600170F49 /* SSHardwareInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BC567023BF8DD600170F49 /* SSHardwareInfo.m */; };
-		35BC569023BF8DD600170F49 /* SSLocalizationInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 35BC567123BF8DD600170F49 /* SSLocalizationInfo.h */; };
+		35BC569023BF8DD600170F49 /* SSLocalizationInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 35BC567123BF8DD600170F49 /* SSLocalizationInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35BC569123BF8DD600170F49 /* SSProcessInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BC567223BF8DD600170F49 /* SSProcessInfo.m */; };
-		35BC569223BF8DD600170F49 /* SSBatteryInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 35BC567323BF8DD600170F49 /* SSBatteryInfo.h */; };
+		35BC569223BF8DD600170F49 /* SSBatteryInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 35BC567323BF8DD600170F49 /* SSBatteryInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35BC569323BF8DD600170F49 /* SSMemoryInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BC567423BF8DD600170F49 /* SSMemoryInfo.m */; };
 		35BC569423BF8DD600170F49 /* SSProcessorInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BC567523BF8DD600170F49 /* SSProcessorInfo.m */; };
 		35BC569523BF8DD600170F49 /* SSApplicationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BC567623BF8DD600170F49 /* SSApplicationInfo.m */; };
-		35BC569623BF8DD600170F49 /* SSCarrierInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 35BC567723BF8DD600170F49 /* SSCarrierInfo.h */; };
-		35BC569723BF8DD600170F49 /* SSDiskInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 35BC567823BF8DD600170F49 /* SSDiskInfo.h */; };
+		35BC569623BF8DD600170F49 /* SSCarrierInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 35BC567723BF8DD600170F49 /* SSCarrierInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		35BC569723BF8DD600170F49 /* SSDiskInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 35BC567823BF8DD600170F49 /* SSDiskInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35BC569823BF8DD600170F49 /* SystemServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BC567923BF8DD600170F49 /* SystemServices.m */; };
 /* End PBXBuildFile section */
 
@@ -147,6 +147,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35BC567A23BF8DD600170F49 /* SystemServices.h in Headers */,
 				35BC568223BF8DD600170F49 /* route.h in Headers */,
 				35BC568123BF8DD600170F49 /* SSHardwareInfo.h in Headers */,
 				35BC569223BF8DD600170F49 /* SSBatteryInfo.h in Headers */,
@@ -156,7 +157,6 @@
 				35BC569023BF8DD600170F49 /* SSLocalizationInfo.h in Headers */,
 				35BC569623BF8DD600170F49 /* SSCarrierInfo.h in Headers */,
 				35BC568423BF8DD600170F49 /* SSProcessInfo.h in Headers */,
-				35BC567A23BF8DD600170F49 /* SystemServices.h in Headers */,
 				35BC568C23BF8DD600170F49 /* SSUUID.h in Headers */,
 				35BC567B23BF8DD600170F49 /* SSNetworkInfo.h in Headers */,
 				35BC568D23BF8DD600170F49 /* SSAccessoryInfo.h in Headers */,
