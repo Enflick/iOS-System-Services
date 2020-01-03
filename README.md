@@ -21,11 +21,20 @@ This is a singleton class to gather all available information about a device.  I
 [![License](https://img.shields.io/cocoapods/l/SystemServices.svg?style=flat)](http://cocoapods.org/pods/SystemServices)
 [![Platform](https://img.shields.io/cocoapods/p/SystemServices.svg?style=flat)](http://cocoapods.org/pods/SystemServices)
 
-iOS System Services is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+### CocoaPods
+
+[CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate Alamofire into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
 pod 'SystemServices', '~> 2.0.1'
+```
+
+### Carthage
+
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate Alamofire into your Xcode project using Carthage, specify it in your `Cartfile`:
+
+```ogdl
+github "Enflick/iOS-System-Services"
 ```
 
 ## Usage
