@@ -47,10 +47,7 @@
     // Set the textview text to nothing
     self.TextView.text = @"";
     
-    // Get an array from the system uptime (to format it)
-    NSArray *uptimeFormat = [[SystemSharedServices systemsUptime] componentsSeparatedByString:@" "];
     // Get all Harware Information
-    NSString *SystemUptime = [NSString stringWithFormat:@"System Uptime: %@ Days %@ Hours %@ Minutes", [uptimeFormat objectAtIndex:0], [uptimeFormat objectAtIndex:1], [uptimeFormat objectAtIndex:2]];
     NSString *DeviceModel = [NSString stringWithFormat:@"Device Model: %@", [SystemSharedServices deviceModel]];
     NSString *DeviceName = [NSString stringWithFormat:@"Device Name: %@", [SystemSharedServices deviceName]];
     NSString *SystemName = [NSString stringWithFormat:@"System Name: %@", [SystemSharedServices systemName]];
@@ -92,7 +89,7 @@
     NSAssert([[allSystemInformation allKeys] containsObject:@"ApplicationVersion"], @"We should be including application version in allSystemInformation");
 
     // Make an array of all the hardware information
-    NSArray *arrayofHW = [[NSArray alloc] initWithObjects:SystemUptime, DeviceModel, DeviceName, SystemName, SystemVersion, SystemDeviceTypeFormattedNO, SystemDeviceTypeFormattedYES, ScreenWidth, ScreenHeight, ScreenBrightness, MultitaskingEnabled, ProximitySensorEnabled, DebuggerAttached, PluggedIn, stepCountingAvailable, distanceAvailable, floorCountingAvailable, Jailbroken, NumberProcessors, NumberActiveProcessors, ProcessorsUsage, AccessoriesAttached, HeadphonesAttached, NumberAttachedAccessories, NameAttachedAccessories, BatteryLevel, Charging, FullyCharged, DeviceOrientation, Country, Language, TimeZone, Currency, ApplicationVersion, ClipboardContent, CFUUID, nil];
+    NSArray *arrayofHW = [[NSArray alloc] initWithObjects:DeviceModel, DeviceName, SystemName, SystemVersion, SystemDeviceTypeFormattedNO, SystemDeviceTypeFormattedYES, ScreenWidth, ScreenHeight, ScreenBrightness, MultitaskingEnabled, ProximitySensorEnabled, DebuggerAttached, PluggedIn, stepCountingAvailable, distanceAvailable, floorCountingAvailable, Jailbroken, NumberProcessors, NumberActiveProcessors, ProcessorsUsage, AccessoriesAttached, HeadphonesAttached, NumberAttachedAccessories, NameAttachedAccessories, BatteryLevel, Charging, FullyCharged, DeviceOrientation, Country, Language, TimeZone, Currency, ApplicationVersion, ClipboardContent, CFUUID, nil];
     
     // Run through all the information
     for (NSString *objects in arrayofHW) {

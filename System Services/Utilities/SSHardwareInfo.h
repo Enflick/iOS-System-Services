@@ -12,9 +12,6 @@
 
 // System Hardware Information
 
-// System Uptime (dd hh mm)
-+ (nullable NSString *)systemUptime;
-
 // Model of Device
 + (nullable NSString *)deviceModel;
 

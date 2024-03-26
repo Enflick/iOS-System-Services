@@ -31,10 +31,6 @@
 
 // System Information
 
-- (NSString *)systemsUptime {
-    return [SSHardwareInfo systemUptime];
-}
-
 - (NSString *)deviceModel {
     return [SSHardwareInfo deviceModel];
 }
@@ -344,7 +340,6 @@
     NSDictionary *systemInformationDict;
     
     // Set up all System Values
-    NSString *systemUptime = [self systemsUptime];
     NSString *deviceModel = [self deviceModel];
     NSString *deviceName = [self deviceName];
     NSString *systemName = [self systemName];
@@ -420,10 +415,6 @@
     NSString *cPUUsage = [NSString stringWithFormat:@"%f", [self applicationCPUUsage]];
     
     // Check to make sure all values are valid (if not, make them)
-    if (systemUptime == nil || systemUptime.length <= 0) {
-        // Invalid value
-        systemUptime = @"Unknown";
-    }
     if (deviceModel == nil || deviceModel.length <= 0) {
         // Invalid value
         deviceModel = @"Unknown";
@@ -719,7 +710,6 @@
     
     // Get all Information in a dictionary
     systemInformationDict = [NSDictionary dictionaryWithObjects:[NSArray arrayWithObjects:
-                                                                 systemUptime,
                                                                  deviceModel,
                                                                  deviceName,
                                                                  systemName,
@@ -795,7 +785,6 @@
                                                                  cPUUsage,
                                                                  nil]
                                                         forKeys:[NSArray arrayWithObjects:
-                                                                 @"Uptime (dd hh mm)",
                                                                  @"DeviceModel",
                                                                  @"DeviceName",
                                                                  @"SystemName",
