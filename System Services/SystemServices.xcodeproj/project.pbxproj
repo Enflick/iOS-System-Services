@@ -18,7 +18,6 @@
 		35BC568223BF8DD600170F49 /* route.h in Headers */ = {isa = PBXBuildFile; fileRef = 35BC566323BF8DD600170F49 /* route.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35BC568323BF8DD600170F49 /* SSBatteryInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BC566423BF8DD600170F49 /* SSBatteryInfo.m */; };
 		35BC568423BF8DD600170F49 /* SSProcessInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 35BC566523BF8DD600170F49 /* SSProcessInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		35BC568523BF8DD600170F49 /* SSDiskInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BC566623BF8DD600170F49 /* SSDiskInfo.m */; };
 		35BC568623BF8DD600170F49 /* SSApplicationInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 35BC566723BF8DD600170F49 /* SSApplicationInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35BC568723BF8DD600170F49 /* SSCarrierInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BC566823BF8DD600170F49 /* SSCarrierInfo.m */; };
 		35BC568823BF8DD600170F49 /* SSProcessorInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 35BC566923BF8DD600170F49 /* SSProcessorInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -36,7 +35,6 @@
 		35BC569423BF8DD600170F49 /* SSProcessorInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BC567523BF8DD600170F49 /* SSProcessorInfo.m */; };
 		35BC569523BF8DD600170F49 /* SSApplicationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BC567623BF8DD600170F49 /* SSApplicationInfo.m */; };
 		35BC569623BF8DD600170F49 /* SSCarrierInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 35BC567723BF8DD600170F49 /* SSCarrierInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		35BC569723BF8DD600170F49 /* SSDiskInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 35BC567823BF8DD600170F49 /* SSDiskInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35BC569823BF8DD600170F49 /* SystemServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BC567923BF8DD600170F49 /* SystemServices.m */; };
 /* End PBXBuildFile section */
 
@@ -53,7 +51,6 @@
 		35BC566323BF8DD600170F49 /* route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = route.h; sourceTree = "<group>"; };
 		35BC566423BF8DD600170F49 /* SSBatteryInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSBatteryInfo.m; sourceTree = "<group>"; };
 		35BC566523BF8DD600170F49 /* SSProcessInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSProcessInfo.h; sourceTree = "<group>"; };
-		35BC566623BF8DD600170F49 /* SSDiskInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSDiskInfo.m; sourceTree = "<group>"; };
 		35BC566723BF8DD600170F49 /* SSApplicationInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSApplicationInfo.h; sourceTree = "<group>"; };
 		35BC566823BF8DD600170F49 /* SSCarrierInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSCarrierInfo.m; sourceTree = "<group>"; };
 		35BC566923BF8DD600170F49 /* SSProcessorInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSProcessorInfo.h; sourceTree = "<group>"; };
@@ -71,7 +68,6 @@
 		35BC567523BF8DD600170F49 /* SSProcessorInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSProcessorInfo.m; sourceTree = "<group>"; };
 		35BC567623BF8DD600170F49 /* SSApplicationInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSApplicationInfo.m; sourceTree = "<group>"; };
 		35BC567723BF8DD600170F49 /* SSCarrierInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSCarrierInfo.h; sourceTree = "<group>"; };
-		35BC567823BF8DD600170F49 /* SSDiskInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSDiskInfo.h; sourceTree = "<group>"; };
 		35BC567923BF8DD600170F49 /* SystemServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemServices.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,7 +113,6 @@
 				35BC566323BF8DD600170F49 /* route.h */,
 				35BC566423BF8DD600170F49 /* SSBatteryInfo.m */,
 				35BC566523BF8DD600170F49 /* SSProcessInfo.h */,
-				35BC566623BF8DD600170F49 /* SSDiskInfo.m */,
 				35BC566723BF8DD600170F49 /* SSApplicationInfo.h */,
 				35BC566823BF8DD600170F49 /* SSCarrierInfo.m */,
 				35BC566923BF8DD600170F49 /* SSProcessorInfo.h */,
@@ -135,7 +130,6 @@
 				35BC567523BF8DD600170F49 /* SSProcessorInfo.m */,
 				35BC567623BF8DD600170F49 /* SSApplicationInfo.m */,
 				35BC567723BF8DD600170F49 /* SSCarrierInfo.h */,
-				35BC567823BF8DD600170F49 /* SSDiskInfo.h */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -162,7 +156,6 @@
 				35BC568D23BF8DD600170F49 /* SSAccessoryInfo.h in Headers */,
 				35BC568823BF8DD600170F49 /* SSProcessorInfo.h in Headers */,
 				35BC568623BF8DD600170F49 /* SSApplicationInfo.h in Headers */,
-				35BC569723BF8DD600170F49 /* SSDiskInfo.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,7 +230,6 @@
 				35BC567E23BF8DD600170F49 /* SSUUID.m in Sources */,
 				35BC567C23BF8DD600170F49 /* SSAccessoryInfo.m in Sources */,
 				35BC568A23BF8DD600170F49 /* SSAccelerometerInfo.m in Sources */,
-				35BC568523BF8DD600170F49 /* SSDiskInfo.m in Sources */,
 				35BC568023BF8DD600170F49 /* SSLocalizationInfo.m in Sources */,
 				35BC569423BF8DD600170F49 /* SSProcessorInfo.m in Sources */,
 				35BC569523BF8DD600170F49 /* SSApplicationInfo.m in Sources */,
@@ -385,7 +377,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -410,7 +402,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
