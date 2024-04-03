@@ -25,44 +25,6 @@ static BOOL sCachedIsProximityEnabled = false;
 
 // System Hardware Information
 
-// System Uptime (dd hh mm)
-+ (NSString *)systemUptime {
-    // Set up the days/hours/minutes
-    NSNumber *days, *hours, *minutes;
-    
-    // Get the info about a process
-    NSProcessInfo *processInfo = [NSProcessInfo processInfo];
-    // Get the uptime of the system
-    NSTimeInterval uptimeInterval = [processInfo systemUptime];
-    // Get the calendar
-    NSCalendar *calendar = [NSCalendar currentCalendar];
-    // Create the Dates
-    NSDate *date = [[NSDate alloc] initWithTimeIntervalSinceNow:(0-uptimeInterval)];
-    unsigned int unitFlags = NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute;
-    NSDateComponents *components = [calendar components:unitFlags fromDate:date toDate:[NSDate date]  options:0];
-    
-    // Get the day, hour and minutes
-    days = [NSNumber numberWithLong:[components day]];
-    hours = [NSNumber numberWithLong:[components hour]];
-    minutes = [NSNumber numberWithLong:[components minute]];
-    
-    // Format the dates
-    NSString *uptime = [NSString stringWithFormat:@"%@ %@ %@",
-                        [days stringValue],
-                        [hours stringValue],
-                        [minutes stringValue]];
-    
-    // Error checking
-    if (!uptime) {
-        // No uptime found
-        // Return nil
-        return nil;
-    }
-    
-    // Return the uptime
-    return uptime;
-}
-
 // Model of Device
 + (NSString *)deviceModel {
     // Get the device model

@@ -30,7 +30,6 @@
 		4C44C5CB17FC5491001E84DF /* SSApplicationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C44C5AF17FC5491001E84DF /* SSApplicationInfo.m */; };
 		4C44C5CC17FC5491001E84DF /* SSBatteryInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C44C5B117FC5491001E84DF /* SSBatteryInfo.m */; };
 		4C44C5CD17FC5491001E84DF /* SSCarrierInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C44C5B317FC5491001E84DF /* SSCarrierInfo.m */; };
-		4C44C5CE17FC5491001E84DF /* SSDiskInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C44C5B517FC5491001E84DF /* SSDiskInfo.m */; };
 		4C44C5CF17FC5491001E84DF /* SSHardwareInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C44C5B717FC5491001E84DF /* SSHardwareInfo.m */; };
 		4C44C5D017FC5491001E84DF /* SSJailbreakCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C44C5B917FC5491001E84DF /* SSJailbreakCheck.m */; };
 		4C44C5D117FC5491001E84DF /* SSLocalizationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C44C5BB17FC5491001E84DF /* SSLocalizationInfo.m */; };
@@ -96,8 +95,6 @@
 		4C44C5B117FC5491001E84DF /* SSBatteryInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSBatteryInfo.m; sourceTree = "<group>"; };
 		4C44C5B217FC5491001E84DF /* SSCarrierInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSCarrierInfo.h; sourceTree = "<group>"; };
 		4C44C5B317FC5491001E84DF /* SSCarrierInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSCarrierInfo.m; sourceTree = "<group>"; };
-		4C44C5B417FC5491001E84DF /* SSDiskInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSDiskInfo.h; sourceTree = "<group>"; };
-		4C44C5B517FC5491001E84DF /* SSDiskInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSDiskInfo.m; sourceTree = "<group>"; };
 		4C44C5B617FC5491001E84DF /* SSHardwareInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSHardwareInfo.h; sourceTree = "<group>"; };
 		4C44C5B717FC5491001E84DF /* SSHardwareInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSHardwareInfo.m; sourceTree = "<group>"; };
 		4C44C5B817FC5491001E84DF /* SSJailbreakCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSJailbreakCheck.h; sourceTree = "<group>"; };
@@ -275,8 +272,6 @@
 				4C44C5B117FC5491001E84DF /* SSBatteryInfo.m */,
 				4C44C5B217FC5491001E84DF /* SSCarrierInfo.h */,
 				4C44C5B317FC5491001E84DF /* SSCarrierInfo.m */,
-				4C44C5B417FC5491001E84DF /* SSDiskInfo.h */,
-				4C44C5B517FC5491001E84DF /* SSDiskInfo.m */,
 				4C44C5B617FC5491001E84DF /* SSHardwareInfo.h */,
 				4C44C5B717FC5491001E84DF /* SSHardwareInfo.m */,
 				4C44C5B817FC5491001E84DF /* SSJailbreakCheck.h */,
@@ -364,7 +359,7 @@
 				ORGANIZATIONNAME = "Shmoopi LLC";
 				TargetAttributes = {
 					01ADF9F216051BFE008B0A6B = {
-						DevelopmentTeam = Q2636DAEP4;
+						DevelopmentTeam = 46H57CBD4Q;
 					};
 				};
 			};
@@ -373,6 +368,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 01ADF9E816051BFE008B0A6B;
@@ -419,7 +415,6 @@
 				01ADFA0816051BFE008B0A6B /* SystemServicesDemoAppDelegate.m in Sources */,
 				01ADFA0E16051BFE008B0A6B /* SystemServicesDemoViewController.m in Sources */,
 				4C44C5C717FC5491001E84DF /* SystemServices.m in Sources */,
-				4C44C5CE17FC5491001E84DF /* SSDiskInfo.m in Sources */,
 				4C44C5CF17FC5491001E84DF /* SSHardwareInfo.m in Sources */,
 				4CCC7651170E09A40057A8A3 /* SystemServicesDemoNetworkViewController.m in Sources */,
 				4C44C5CA17FC5491001E84DF /* SSAccessoryInfo.m in Sources */,
@@ -556,7 +551,7 @@
 		01ADFA1216051BFE008B0A6B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = Q2636DAEP4;
+				DEVELOPMENT_TEAM = 46H57CBD4Q;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SystemServicesDemo/SystemServicesDemo-Prefix.pch";
 				INFOPLIST_FILE = "SystemServicesDemo/SystemServicesDemo-Info.plist";
@@ -574,7 +569,7 @@
 		01ADFA1316051BFE008B0A6B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = Q2636DAEP4;
+				DEVELOPMENT_TEAM = 46H57CBD4Q;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SystemServicesDemo/SystemServicesDemo-Prefix.pch";
 				INFOPLIST_FILE = "SystemServicesDemo/SystemServicesDemo-Info.plist";

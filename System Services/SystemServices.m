@@ -17,7 +17,7 @@
 
 @implementation SystemServices
 
-@dynamic allSystemInformation, systemsUptime, deviceModel, deviceName, systemName, systemsVersion, systemDeviceTypeNotFormatted, systemDeviceTypeFormatted, screenWidth, screenHeight, screenBrightness, multitaskingEnabled, proximitySensorEnabled, debuggerAttached, pluggedIn, jailbroken, numberProcessors, numberActiveProcessors, processorsUsage, accessoriesAttached, headphonesAttached, numberAttachedAccessories, nameAttachedAccessories, carrierName, carrierCountry, carrierMobileCountryCode, carrierISOCountryCode, carrierMobileNetworkCode, carrierAllowsVOIP, batteryLevel, charging, fullyCharged, currentIPAddress, externalIPAddress, cellIPAddress, cellNetmaskAddress, cellBroadcastAddress, wiFiIPAddress, wiFiNetmaskAddress, wiFiBroadcastAddress, wiFiRouterAddress, connectedToWiFi, connectedToCellNetwork, processID, diskSpace, freeDiskSpaceinRaw, freeDiskSpaceinPercent, usedDiskSpaceinRaw, usedDiskSpaceinPercent, longDiskSpace, longFreeDiskSpace, totalMemory, freeMemoryinRaw, freeMemoryinPercent, usedMemoryinRaw, usedMemoryinPercent, activeMemoryinRaw, activeMemoryinPercent, inactiveMemoryinRaw, inactiveMemoryinPercent, wiredMemoryinRaw, wiredMemoryinPercent, purgableMemoryinRaw, purgableMemoryinPercent, deviceOrientation, country, language, timeZoneSS, currency, applicationVersion, clipboardContent, cfuuid, applicationCPUUsage, stepCountingAvailable, distanceAvailable, floorCountingAvailable;
+@dynamic allSystemInformation, systemsUptime, deviceModel, deviceName, systemName, systemsVersion, systemDeviceTypeNotFormatted, systemDeviceTypeFormatted, screenWidth, screenHeight, screenBrightness, multitaskingEnabled, proximitySensorEnabled, debuggerAttached, pluggedIn, jailbroken, numberProcessors, numberActiveProcessors, processorsUsage, accessoriesAttached, headphonesAttached, numberAttachedAccessories, nameAttachedAccessories, carrierName, carrierCountry, carrierMobileCountryCode, carrierISOCountryCode, carrierMobileNetworkCode, carrierAllowsVOIP, batteryLevel, charging, fullyCharged, currentIPAddress, externalIPAddress, cellIPAddress, cellNetmaskAddress, cellBroadcastAddress, wiFiIPAddress, wiFiNetmaskAddress, wiFiBroadcastAddress, wiFiRouterAddress, connectedToWiFi, connectedToCellNetwork, processID, totalMemory, freeMemoryinRaw, freeMemoryinPercent, usedMemoryinRaw, usedMemoryinPercent, activeMemoryinRaw, activeMemoryinPercent, inactiveMemoryinRaw, inactiveMemoryinPercent, wiredMemoryinRaw, wiredMemoryinPercent, purgableMemoryinRaw, purgableMemoryinPercent, deviceOrientation, country, language, timeZoneSS, currency, applicationVersion, clipboardContent, cfuuid, applicationCPUUsage, stepCountingAvailable, distanceAvailable, floorCountingAvailable;
 
 // Singleton
 + (nonnull instancetype)sharedServices {
@@ -30,10 +30,6 @@
 }
 
 // System Information
-
-- (NSString *)systemsUptime {
-    return [SSHardwareInfo systemUptime];
-}
 
 - (NSString *)deviceModel {
     return [SSHardwareInfo deviceModel];
@@ -215,34 +211,6 @@
     return [SSProcessInfo processID];
 }
 
-- (NSString *)diskSpace {
-    return [SSDiskInfo diskSpace];
-}
-
-- (NSString *)freeDiskSpaceinRaw {
-    return [SSDiskInfo freeDiskSpace:NO];
-}
-
-- (NSString *)freeDiskSpaceinPercent {
-    return [SSDiskInfo freeDiskSpace:YES];
-}
-
-- (NSString *)usedDiskSpaceinRaw {
-    return [SSDiskInfo usedDiskSpace:NO];
-}
-
-- (NSString *)usedDiskSpaceinPercent {
-    return [SSDiskInfo usedDiskSpace:YES];
-}
-
-- (long long)longDiskSpace {
-    return [SSDiskInfo longDiskSpace];
-}
-
-- (long long)longFreeDiskSpace {
-    return [SSDiskInfo longFreeDiskSpace];
-}
-
 - (double)totalMemory {
     return [SSMemoryInfo totalMemory];
 }
@@ -344,7 +312,6 @@
     NSDictionary *systemInformationDict;
     
     // Set up all System Values
-    NSString *systemUptime = [self systemsUptime];
     NSString *deviceModel = [self deviceModel];
     NSString *deviceName = [self deviceName];
     NSString *systemName = [self systemName];
@@ -390,13 +357,6 @@
     NSString *connectedToWiFi = ([self connectedToWiFi]) ? @"Yes" : @"No";
     NSString *connectedToCellNetwork = ([self connectedToCellNetwork]) ? @"Yes" : @"No";
     NSString *processID = [NSString stringWithFormat:@"%d", [self processID]];
-    NSString *diskSpace = [self diskSpace];
-    NSString *freeDiskSpaceNO = [self freeDiskSpaceinRaw];
-    NSString *freeDiskSpaceYES = [self freeDiskSpaceinPercent];
-    NSString *usedDiskSpaceNO = [self usedDiskSpaceinRaw];
-    NSString *usedDiskSpaceYES = [self usedDiskSpaceinPercent];
-    NSString *longDiskSpace = [NSString stringWithFormat:@"%lld", [self longDiskSpace]];
-    NSString *longFreeDiskSpace = [NSString stringWithFormat:@"%lld", [self longFreeDiskSpace]];
     NSString *totalMemory = [NSString stringWithFormat:@"%f", [self totalMemory]];
     NSString *freeMemoryNO = [NSString stringWithFormat:@"%f", [self freeMemoryinRaw]];
     NSString *freeMemoryYES = [NSString stringWithFormat:@"%f", [self freeMemoryinPercent]];
@@ -420,10 +380,6 @@
     NSString *cPUUsage = [NSString stringWithFormat:@"%f", [self applicationCPUUsage]];
     
     // Check to make sure all values are valid (if not, make them)
-    if (systemUptime == nil || systemUptime.length <= 0) {
-        // Invalid value
-        systemUptime = @"Unknown";
-    }
     if (deviceModel == nil || deviceModel.length <= 0) {
         // Invalid value
         deviceModel = @"Unknown";
@@ -604,34 +560,6 @@
         // Invalid value
         processID = @"Unknown";
     }
-    if (diskSpace == nil || diskSpace.length <= 0) {
-        // Invalid value
-        diskSpace = @"Unknown";
-    }
-    if (freeDiskSpaceNO == nil || freeDiskSpaceNO.length <= 0) {
-        // Invalid value
-        freeDiskSpaceNO = @"Unknown";
-    }
-    if (freeDiskSpaceYES == nil || freeDiskSpaceYES.length <= 0) {
-        // Invalid value
-        freeDiskSpaceYES = @"Unknown";
-    }
-    if (usedDiskSpaceNO == nil || usedDiskSpaceNO.length <= 0) {
-        // Invalid value
-        usedDiskSpaceNO = @"Unknown";
-    }
-    if (usedDiskSpaceYES == nil || usedDiskSpaceYES.length <= 0) {
-        // Invalid value
-        usedDiskSpaceYES = @"Unknown";
-    }
-    if (longDiskSpace == nil || longDiskSpace.length <= 0) {
-        // Invalid value
-        longDiskSpace = @"Unknown";
-    }
-    if (longFreeDiskSpace == nil || longFreeDiskSpace.length <= 0) {
-        // Invalid value
-        longFreeDiskSpace = @"Unknown";
-    }
     if (totalMemory == nil || totalMemory.length <= 0) {
         // Invalid value
         totalMemory = @"Unknown";
@@ -719,7 +647,6 @@
     
     // Get all Information in a dictionary
     systemInformationDict = [NSDictionary dictionaryWithObjects:[NSArray arrayWithObjects:
-                                                                 systemUptime,
                                                                  deviceModel,
                                                                  deviceName,
                                                                  systemName,
@@ -765,13 +692,6 @@
                                                                  connectedToWiFi,
                                                                  connectedToCellNetwork,
                                                                  processID,
-                                                                 diskSpace,
-                                                                 freeDiskSpaceNO,
-                                                                 freeDiskSpaceYES,
-                                                                 usedDiskSpaceNO,
-                                                                 usedDiskSpaceYES,
-                                                                 longDiskSpace,
-                                                                 longFreeDiskSpace,
                                                                  totalMemory,
                                                                  freeMemoryNO,
                                                                  freeMemoryYES,
@@ -795,7 +715,6 @@
                                                                  cPUUsage,
                                                                  nil]
                                                         forKeys:[NSArray arrayWithObjects:
-                                                                 @"Uptime (dd hh mm)",
                                                                  @"DeviceModel",
                                                                  @"DeviceName",
                                                                  @"SystemName",
@@ -841,13 +760,6 @@
                                                                  @"ConnectedToWiFi",
                                                                  @"ConnectedToCellNetwork",
                                                                  @"ProcessID",
-                                                                 @"DiskSpace",
-                                                                 @"FreeDiskSpace (Not Formatted)",
-                                                                 @"FreeDiskSpace (Formatted)",
-                                                                 @"UsedDiskSpace (Not Formatted)",
-                                                                 @"UsedDiskSpace (Formatted)",
-                                                                 @"LongDiskSpace",
-                                                                 @"LongFreeDiskSpace",
                                                                  @"TotalMemory",
                                                                  @"FreeMemory (Not Formatted)",
                                                                  @"FreeMemory (Formatted)",

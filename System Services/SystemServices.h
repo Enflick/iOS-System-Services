@@ -11,7 +11,6 @@
 #import "SSApplicationInfo.h"
 #import "SSBatteryInfo.h"
 #import "SSCarrierInfo.h"
-#import "SSDiskInfo.h"
 #import "SSHardwareInfo.h"
 #import "SSJailbreakCheck.h"
 #import "SSLocalizationInfo.h"
@@ -184,29 +183,6 @@
 
 // Process ID
 @property (nonatomic, readonly) int processID;
-
-/* Disk Information */
-
-// Total Disk Space
-@property (nonatomic, readonly, nullable) NSString *diskSpace;
-
-// Total Free Disk Space (Raw)
-@property (nonatomic, readonly, nullable) NSString *freeDiskSpaceinRaw;
-
-// Total Free Disk Space (Percentage)
-@property (nonatomic, readonly, nullable) NSString *freeDiskSpaceinPercent;
-
-// Total Used Disk Space (Raw)
-@property (nonatomic, readonly, nullable) NSString *usedDiskSpaceinRaw;
-
-// Total Used Disk Space (Percentage)
-@property (nonatomic, readonly, nullable) NSString *usedDiskSpaceinPercent;
-
-// Get the total disk space in long format
-@property (nonatomic, readonly) long long longDiskSpace;
-
-// Get the total free disk space in long format
-@property (nonatomic, readonly) long long longFreeDiskSpace;
 
 /* Memory Information */
 

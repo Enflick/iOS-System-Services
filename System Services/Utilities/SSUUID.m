@@ -10,7 +10,6 @@
 #import "SSHardwareInfo.h"
 #import "SSProcessorInfo.h"
 #import "SSNetworkInfo.h"
-#import "SSDiskInfo.h"
 #import "SSAccelerometerInfo.h"
 #import "SSLocalizationInfo.h"
 #import "SSMemoryInfo.h"
